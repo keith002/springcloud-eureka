@@ -28,4 +28,9 @@ public class MyRestController {
         user.setPort(request.getRequestURL().toString());
         return user;
     }
+    
+    @GetMapping(value = "/hello", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public String hello(HttpServletRequest request){
+        return "Hello world!!!";
+    }
 }
