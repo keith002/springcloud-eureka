@@ -2,6 +2,17 @@ server:
   port: 8761
 spring:
   profiles: eureka-colony1
+  application:
+    name: config-server
+  cloud:
+    config:
+      server: 
+        git: 
+          uri: https://github.com/fymod/easy-spring-cloud/
+          search-paths: 07-springcloud-config
+          username: 
+          password: 
+        prefix: /config
 eureka:
   instance:
     hostname: eureka-colony1
@@ -41,6 +52,7 @@ management:
     roles: SUPERUSER #角色
   port: 8761 # 指定端口
   address: 192.168.20.211 # 指定地址
+ 
   
 ---
 
